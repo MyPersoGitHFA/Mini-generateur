@@ -145,5 +145,7 @@ def calculer(distance_mm, surface_cm2, N, nb_bobines, diametre_mm, rpm, export_c
 
     return texte, figure, None
 
+server = app.server
+
 if __name__ == '__main__':
     app.run_server(debug=True)
