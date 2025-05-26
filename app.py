@@ -7,6 +7,7 @@ import io
 import base64
 
 app = dash.Dash(__name__)
+server = app.server
 
 def champ_magnetique(distance_mm):
     distance_cm = distance_mm / 10
@@ -145,7 +146,7 @@ def calculer(distance_mm, surface_cm2, N, nb_bobines, diametre_mm, rpm, export_c
 
     return texte, figure, None
 
-server = app.server
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
